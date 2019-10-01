@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home</title>
+        <script src="sgpaCalculation.js"></script>
+        <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <style>
+        body{
+            background-color: rgb(64, 104, 138);
+            margin:100px;
+            padding:100px;
+            text-align:center;
+            
+        }
+        h1{
+            color:mediumturquoise;
+        }
+        
+        </style>
+    </head>
+    <body>
+        <form action="post">
+            <h1>Daffodil International University</h1><br>
+            <b>Please select your campus:</b><br>
+            <select name="select" id="select">
+                <option value="Permanent Campus">Permanemt Campus</option>
+                <option value="Main Campus">Main Camous</option>
+            </select><br><br>
+            <b>Please enter your last semester SGPA:</b><br>
+            <input type="text" id="SGPA" placeholder="Enter SGPA"><br><br>
+            Do you want to know how much you need to pay?<br>
+            <input type="checkbox" id="pay" onclick="enablePay();">Yes<br><br>
+            <b>Enter Total Amount Shown on Student Portal:</b><br>
+            <input type="text" placeholder="Enter Amount" id="amount" disabled><br><br>
+            Do you have previous Scholarship on your H.S.C resulr? <br>
+            <input type="checkbox" id="per" onclick="enablePersentage()">Yes
+            <br><br>
+            <b>If yes then how much?(in persentage)</b><br>
+            <input type="text" placeholder="Enter peersentage" id="persentage"
+                disabled><br><br>
+            <input type="button" id="Scholarship" onclick="scholarshipCalculation()" class="btn btn-primary"
+                value="Calculate the scholarship">
+            <input type="button" id="Amount" onclick="calculateAmount()" class="btn btn-dark"
+                value="Calculate the Amount"><br><br>
+                <div id="resultScholarship"></div>
+                
+        </form>
+    </body>
+</html>
